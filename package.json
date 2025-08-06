@@ -1,49 +1,45 @@
 {
   "name": "smart-packing",
-  "main": "expo-router/entry",
   "version": "1.0.0",
+  "description": "Smart Packing - React Native App with Express.js Backend",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "lint": "expo lint"
-  },
-  "dependencies": {
-    "@expo/vector-icons": "^14.1.0",
-    "@react-navigation/bottom-tabs": "^7.3.10",
-    "@react-navigation/elements": "^2.3.8",
-    "@react-navigation/native": "^7.1.6",
-    "expo": "53.0.20",
-    "expo-blur": "~14.1.5",
-    "expo-constants": "~17.1.6",
-    "expo-font": "~13.3.1",
-    "expo-haptics": "~14.1.4",
-    "expo-image": "~2.4.0",
-    "expo-linking": "~7.1.7",
-    "expo-router": "~5.1.4",
-    "expo-splash-screen": "~0.30.10",
-    "expo-status-bar": "~2.2.3",
-    "expo-symbols": "~0.4.5",
-    "expo-system-ui": "~5.0.10",
-    "expo-web-browser": "~14.2.0",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
-    "react-native": "0.79.5",
-    "react-native-gesture-handler": "~2.24.0",
-    "react-native-reanimated": "~3.17.4",
-    "react-native-safe-area-context": "5.4.0",
-    "react-native-screens": "~4.11.1",
-    "react-native-web": "~0.20.0",
-    "react-native-webview": "13.13.5"
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "start": "cd backend && npm start",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && npm run lint",
+    "test": "npm run test:backend && npm run test:frontend",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "clean": "npm run clean:backend && npm run clean:frontend",
+    "clean:frontend": "cd frontend && rm -rf node_modules",
+    "clean:backend": "cd backend && npm run clean"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@types/react": "~19.0.10",
-    "typescript": "~5.8.3",
-    "eslint": "^9.25.0",
-    "eslint-config-expo": "~9.2.0"
+    "concurrently": "^8.2.2"
   },
-  "private": true
-}
+  "keywords": [
+    "react-native",
+    "expo",
+    "express",
+    "typescript",
+    "smart-packing"
+  ],
+  "author": "Smart Packing Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+} 

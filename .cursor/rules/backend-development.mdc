@@ -1,0 +1,85 @@
+# Backend Development Guidelines
+
+## Express.js Architecture
+The backend follows a modern Express.js architecture with TypeScript:
+
+### Project Structure
+- [backend/src/](mdc:backend/src/) - Main source code directory
+  - [backend/src/index.ts](mdc:backend/src/index.ts) - Server entry point
+  - Controllers, routes, middleware, and services directories
+
+### Configuration Files
+- [backend/package.json](mdc:backend/package.json) - Dependencies and scripts
+- [backend/tsconfig.json](mdc:backend/tsconfig.json) - TypeScript configuration
+- [backend/.eslintrc.js](mdc:backend/.eslintrc.js) - ESLint configuration
+- [backend/env.example](mdc:backend/env.example) - Environment variables template
+
+## Development Guidelines
+
+### TypeScript Best Practices
+- Use strict TypeScript configuration
+- Define proper interfaces for all data structures
+- Use type inference when possible
+- Avoid `any` type - use proper typing
+- Implement proper error handling with typed errors
+
+### Express.js Patterns
+- Use middleware for cross-cutting concerns
+- Implement proper route organization
+- Use controllers for business logic
+- Implement service layer for data access
+- Use proper HTTP status codes
+
+### Security Best Practices
+- Use Helmet for security headers
+- Implement CORS properly
+- Use rate limiting to prevent abuse
+- Validate all input data
+- Use environment variables for sensitive data
+
+### API Design
+- Follow RESTful conventions
+- Use proper HTTP methods (GET, POST, PUT, DELETE)
+- Implement proper error responses
+- Use consistent response formats
+- Document API endpoints
+
+### Performance Optimization
+- Use compression middleware
+- Implement proper caching strategies
+- Optimize database queries
+- Use connection pooling
+- Monitor performance metrics
+
+### Testing Strategy
+- Write unit tests for all functions
+- Implement integration tests for API endpoints
+- Use proper mocking for external dependencies
+- Test error scenarios
+- Maintain good test coverage
+
+### Error Handling
+- Implement global error handling middleware
+- Use proper error logging
+- Return appropriate error responses
+- Handle async errors properly
+- Implement proper validation errors
+
+### Database Integration (Future)
+- Use TypeORM or Prisma for database access
+- Implement proper migrations
+- Use connection pooling
+- Implement proper transaction handling
+- Use environment-specific configurations
+
+## Development Commands
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build TypeScript to JavaScript
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint for code quality
+- `npm test` - Run test suite
+- `npm run clean` - Clean build artifacts
+description:
+globs:
+alwaysApply: false
+---

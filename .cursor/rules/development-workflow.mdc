@@ -6,28 +6,53 @@
 - Check off completed tasks as you go
 - Follow a step-by-step approach for implementation
 
-## Development Environment Setup
-- Use Node.js and npm for package management
-- Install Expo CLI globally: `npm install -g @expo/cli`
-- Use TypeScript for all new development
-- Configure ESLint for code quality
+## Project Structure
+This is a monorepo with two main applications:
+- **Frontend**: React Native with Expo (in [frontend/](mdc:frontend/))
+- **Backend**: Express.js with TypeScript (in [backend/](mdc:backend/))
 
-## Development Commands
+## Development Environment Setup
+- Use Node.js 18+ and npm for package management
+- Install Expo CLI globally: `npm install -g @expo/cli`
+- Use TypeScript for both frontend and backend
+- Configure ESLint for code quality in both applications
+
+## Root Level Commands
 Reference [package.json](mdc:package.json) for available scripts:
+- `npm run dev` - Start both frontend and backend in development mode
+- `npm run dev:frontend` - Start only frontend development
+- `npm run dev:backend` - Start only backend development
+- `npm run build` - Build both frontend and backend
+- `npm run lint` - Lint both frontend and backend
+- `npm run test` - Test both frontend and backend
+- `npm run install:all` - Install dependencies for all applications
+
+## Frontend Development
+Reference [frontend/package.json](mdc:frontend/package.json) for frontend scripts:
 - `npm start` - Start Expo development server
 - `npm run android` - Start Android development
 - `npm run ios` - Start iOS development
 - `npm run web` - Start web development
-- `npm run lint` - Run ESLint for code quality
+- `npm run lint` - Run ESLint for frontend
+
+## Backend Development
+Reference [backend/package.json](mdc:backend/package.json) for backend scripts:
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build TypeScript to JavaScript
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint for backend
+- `npm test` - Run test suite
 
 ## Code Quality Standards
-- Follow ESLint configuration in [eslint.config.js](mdc:eslint.config.js)
-- Use TypeScript strict mode as configured in [tsconfig.json](mdc:tsconfig.json)
+- Follow ESLint configurations in both applications
+- Use TypeScript strict mode in both frontend and backend
 - Implement proper error handling
 - Write meaningful commit messages
+- Follow consistent code formatting
 
 ## Testing Strategy
-- Test on all target platforms (iOS, Android, Web)
+- Test frontend on all target platforms (iOS, Android, Web)
+- Test backend API endpoints thoroughly
 - Use iOS Simulator for iOS testing
 - Use Android Emulator for Android testing
 - Test on physical devices for final validation
@@ -45,20 +70,31 @@ Reference [package.json](mdc:package.json) for available scripts:
 - Test Android-specific features on Android Emulator
 - Use platform-specific file extensions when needed
 - Implement proper platform detection
+- Test backend API with different clients
 
 ## Performance Monitoring
-- Monitor app performance on all platforms
-- Use React DevTools for debugging
-- Profile memory usage
-- Optimize bundle size
-- Monitor network requests
+- Monitor frontend app performance on all platforms
+- Monitor backend API performance and response times
+- Use React DevTools for frontend debugging
+- Profile memory usage in both applications
+- Optimize bundle size for frontend
+- Monitor network requests and API calls
 
 ## Deployment Process
-- Use EAS Build for production builds
+- Use EAS Build for frontend production builds
+- Deploy backend to cloud platform (Heroku, AWS, etc.)
 - Test builds on all target platforms
 - Implement proper environment management
-- Follow app store guidelines
+- Follow app store guidelines for frontend
 - Monitor crash reports and analytics
+- Set up CI/CD pipelines for both applications
+
+## Environment Management
+- Use environment variables for configuration
+- Keep sensitive data in environment files
+- Use different configurations for development, staging, and production
+- Document all required environment variables
+- Use proper secrets management
 description:
 globs:
 alwaysApply: false
