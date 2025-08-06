@@ -1,0 +1,65 @@
+# Development Workflow
+
+## Task Management
+- Always create a to-do list for new tasks
+- Break down complex tasks into smaller steps
+- Check off completed tasks as you go
+- Follow a step-by-step approach for implementation
+
+## Development Environment Setup
+- Use Node.js and npm for package management
+- Install Expo CLI globally: `npm install -g @expo/cli`
+- Use TypeScript for all new development
+- Configure ESLint for code quality
+
+## Development Commands
+Reference [package.json](mdc:package.json) for available scripts:
+- `npm start` - Start Expo development server
+- `npm run android` - Start Android development
+- `npm run ios` - Start iOS development
+- `npm run web` - Start web development
+- `npm run lint` - Run ESLint for code quality
+
+## Code Quality Standards
+- Follow ESLint configuration in [eslint.config.js](mdc:eslint.config.js)
+- Use TypeScript strict mode as configured in [tsconfig.json](mdc:tsconfig.json)
+- Implement proper error handling
+- Write meaningful commit messages
+
+## Testing Strategy
+- Test on all target platforms (iOS, Android, Web)
+- Use iOS Simulator for iOS testing
+- Use Android Emulator for Android testing
+- Test on physical devices for final validation
+- Implement unit tests for critical components
+
+## Version Control
+- Use Git for version control
+- Follow conventional commit messages
+- Create feature branches for new development
+- Review code before merging
+- Keep commits atomic and focused
+
+## Platform-Specific Development
+- Test iOS-specific features on iOS Simulator
+- Test Android-specific features on Android Emulator
+- Use platform-specific file extensions when needed
+- Implement proper platform detection
+
+## Performance Monitoring
+- Monitor app performance on all platforms
+- Use React DevTools for debugging
+- Profile memory usage
+- Optimize bundle size
+- Monitor network requests
+
+## Deployment Process
+- Use EAS Build for production builds
+- Test builds on all target platforms
+- Implement proper environment management
+- Follow app store guidelines
+- Monitor crash reports and analytics
+description:
+globs:
+alwaysApply: false
+---

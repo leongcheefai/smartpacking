@@ -1,0 +1,70 @@
+# Expo Development Guidelines
+
+## Expo Configuration
+The project uses Expo SDK 53 with the following key configurations:
+
+### Core Expo Features
+- **Expo Router**: File-based routing system
+- **Expo Constants**: Environment and app configuration
+- **Expo Splash Screen**: Custom splash screen implementation
+- **Expo Status Bar**: Status bar management
+- **Expo System UI**: System UI integration
+
+### Platform Configuration
+Reference [app.json](mdc:app.json) for platform-specific settings:
+
+#### iOS Configuration
+- Supports tablet devices
+- Uses automatic user interface style
+- Implements new architecture features
+
+#### Android Configuration
+- Edge-to-edge display enabled
+- Adaptive icons configured
+- Material Design 3 support
+
+#### Web Configuration
+- Static output generation
+- Metro bundler configuration
+- Favicon and web assets
+
+## Development Workflow
+- Use `expo start` for development server
+- Use `expo start --ios` for iOS simulator
+- Use `expo start --android` for Android emulator
+- Use `expo start --web` for web development
+
+## Plugin Management
+Current plugins configured:
+- expo-router: Navigation system
+- expo-splash-screen: Splash screen management
+- expo-web-browser: Web browser integration
+
+## Build and Deployment
+- Use EAS Build for production builds
+- Configure build profiles in app.json
+- Use typed routes for better type safety
+- Implement proper environment management
+
+## Performance Optimization
+- Use expo-image for optimized image loading
+- Implement proper asset management
+- Use expo-blur for visual effects
+- Leverage expo-haptics for tactile feedback
+
+## Testing and Debugging
+- Use Expo DevTools for debugging
+- Implement proper error boundaries
+- Use expo-constants for environment variables
+- Test on all target platforms
+
+## Best Practices
+- Keep Expo SDK updated
+- Use managed workflow when possible
+- Implement proper error handling
+- Follow Expo's security guidelines
+- Use TypeScript for better development experience
+description:
+globs:
+alwaysApply: false
+---

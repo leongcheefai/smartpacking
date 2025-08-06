@@ -1,0 +1,66 @@
+# iOS SwiftUI Integration Guidelines
+
+## Native Module Development
+When creating native iOS modules with SwiftUI:
+
+### File Structure
+- Create native modules in `ios/` directory
+- Use `.swift` extension for Swift files
+- Use `.swiftui` extension for SwiftUI view files
+- Follow iOS naming conventions (PascalCase for classes, camelCase for methods)
+
+### SwiftUI View Integration
+- Create SwiftUI views that can be bridged to React Native
+- Use `UIViewRepresentable` for UIKit integration
+- Implement proper lifecycle management
+- Handle state updates between React Native and SwiftUI
+
+### Bridging Guidelines
+- Use `RCTBridgeModule` for native module communication
+- Implement proper event emission to React Native
+- Handle props and callbacks correctly
+- Use `@objc` annotations for React Native compatibility
+
+### Performance Considerations
+- Minimize bridge calls between React Native and SwiftUI
+- Use efficient data structures for data passing
+- Implement proper memory management
+- Cache SwiftUI views when appropriate
+
+### Platform-Specific Features
+- Leverage iOS-specific features like Haptic Feedback
+- Use iOS design patterns and conventions
+- Implement proper accessibility features
+- Follow iOS Human Interface Guidelines
+
+### Testing
+- Test SwiftUI components independently
+- Test bridge communication thoroughly
+- Use iOS Simulator for development
+- Test on physical devices for final validation
+
+## Integration Examples
+```swift
+// Example SwiftUI view for React Native
+import SwiftUI
+import React
+
+@objc(SwiftUIComponent)
+class SwiftUIComponent: RCTViewManager {
+    override func view() -> UIView! {
+        let hostingController = UIHostingController(rootView: MySwiftUIView())
+        return hostingController.view
+    }
+}
+```
+
+## Best Practices
+- Keep SwiftUI views modular and reusable
+- Use proper dependency injection
+- Implement error handling for native operations
+- Document all public interfaces
+- Follow iOS security best practices
+description:
+globs:
+alwaysApply: false
+---

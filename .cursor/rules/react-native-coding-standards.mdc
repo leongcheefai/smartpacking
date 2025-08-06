@@ -1,0 +1,57 @@
+# React Native Coding Standards
+
+## Component Structure
+- Use functional components with hooks
+- Follow PascalCase for component names
+- Use camelCase for props and variables
+- Export components as default exports
+- Place components in appropriate directories based on scope
+
+## TypeScript Guidelines
+- Use TypeScript for all new files
+- Define proper interfaces for props
+- Use type inference when possible
+- Avoid `any` type - use proper typing
+- Use union types for conditional props
+
+## Styling Standards
+- Use StyleSheet.create() for styles
+- Follow camelCase for style properties
+- Use theme colors from [constants/Colors.ts](mdc:constants/Colors.ts)
+- Implement responsive design for different screen sizes
+- Use flexbox for layouts
+
+## Navigation
+- Use Expo Router for file-based routing
+- Follow the routing structure in [app/](mdc:app/)
+- Use typed routes when possible
+- Implement proper navigation guards
+
+## Performance Best Practices
+- Use React.memo() for expensive components
+- Implement proper list virtualization
+- Use useCallback and useMemo for expensive operations
+- Optimize images with expo-image
+- Implement proper error boundaries
+
+## Platform-Specific Code
+- Use Platform.OS for platform-specific logic
+- Create platform-specific files with .ios.tsx/.android.tsx extensions
+- Use react-native-safe-area-context for safe area handling
+- Implement proper keyboard handling
+
+## State Management
+- Use React hooks for local state
+- Implement proper state lifting
+- Use context for global state when needed
+- Follow immutable state patterns
+
+## Error Handling
+- Implement proper error boundaries
+- Use try-catch blocks for async operations
+- Provide meaningful error messages
+- Log errors appropriately
+description:
+globs:
+alwaysApply: false
+---

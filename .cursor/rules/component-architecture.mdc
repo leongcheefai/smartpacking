@@ -1,0 +1,81 @@
+# Component Architecture Guidelines
+
+## Component Organization
+The project follows a structured component architecture:
+
+### Directory Structure
+- [components/](mdc:components/) - Main components directory
+  - [ui/](mdc:components/ui/) - Reusable UI components
+  - Platform-specific components with .ios.tsx/.android.tsx extensions
+
+### Component Categories
+
+#### UI Components
+- **Themed Components**: [ThemedText.tsx](mdc:components/ThemedText.tsx), [ThemedView.tsx](mdc:components/ThemedView.tsx)
+- **Interactive Components**: [HapticTab.tsx](mdc:components/HapticTab.tsx), [Collapsible.tsx](mdc:components/Collapsible.tsx)
+- **Layout Components**: [ParallaxScrollView.tsx](mdc:components/ParallaxScrollView.tsx)
+- **Utility Components**: [ExternalLink.tsx](mdc:components/ExternalLink.tsx), [HelloWave.tsx](mdc:components/HelloWave.tsx)
+
+## Component Design Principles
+
+### Reusability
+- Create components that can be used across different screens
+- Use props for customization
+- Implement proper default values
+- Follow single responsibility principle
+
+### Theming Support
+- Use theme colors from [constants/Colors.ts](mdc:constants/Colors.ts)
+- Implement dark/light mode support
+- Use [hooks/useColorScheme.ts](mdc:hooks/useColorScheme.ts) for theme detection
+- Apply consistent styling patterns
+
+### Performance Optimization
+- Use React.memo() for expensive components
+- Implement proper prop validation
+- Avoid unnecessary re-renders
+- Use useCallback for event handlers
+
+### Accessibility
+- Implement proper accessibility labels
+- Use semantic HTML elements
+- Support screen readers
+- Follow WCAG guidelines
+
+## Component Patterns
+
+### Presentational Components
+- Focus on UI presentation
+- Receive data via props
+- Don't manage state
+- Are easily testable
+
+### Container Components
+- Handle business logic
+- Manage state
+- Connect to data sources
+- Pass data to presentational components
+
+### Higher-Order Components
+- Enhance existing components
+- Add cross-cutting concerns
+- Implement proper prop forwarding
+- Maintain component identity
+
+## Styling Guidelines
+- Use StyleSheet.create() for styles
+- Implement responsive design
+- Use theme constants for colors
+- Follow platform-specific design patterns
+- Use flexbox for layouts
+
+## Testing Strategy
+- Test components in isolation
+- Mock dependencies properly
+- Test user interactions
+- Verify accessibility features
+- Test on different screen sizes
+description:
+globs:
+alwaysApply: false
+---
