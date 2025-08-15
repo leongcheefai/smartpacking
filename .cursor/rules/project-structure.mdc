@@ -1,3 +1,64 @@
+---
+alwaysApply: true
+---
+
+# Smart Packing - Full Stack Project Structure
+
+## Project Overview
+This is a full-stack application with a React Native frontend (Expo) and Express.js backend. The project supports Android, iOS, and Web platforms with a robust backend API.
+
+## Key Files and Directories
+
+### Root Configuration
+- [package.json](mdc:package.json) - Root project configuration with workspace management
+- [README.md](mdc:README.md) - Project documentation
+
+### Frontend (React Native + Expo)
+- [frontend/](mdc:frontend/) - React Native application directory
+  - [frontend/package.json](mdc:frontend/package.json) - Frontend dependencies and scripts
+  - [frontend/app.json](mdc:frontend/app.json) - Expo configuration with platform-specific settings
+  - [frontend/tsconfig.json](mdc:frontend/tsconfig.json) - TypeScript configuration for frontend
+  - [frontend/eslint.config.js](mdc:frontend/eslint.config.js) - ESLint configuration for frontend
+  - [frontend/app/](mdc:frontend/app/) - Main application directory using Expo Router
+  - [frontend/components/](mdc:frontend/components/) - Reusable React components
+  - [frontend/constants/](mdc:frontend/constants/) - Frontend constants and theme
+  - [frontend/hooks/](mdc:frontend/hooks/) - Custom React hooks
+  - [frontend/assets/](mdc:frontend/assets/) - Static assets
+
+### Backend (Express.js + TypeScript)
+- [backend/](mdc:backend/) - Express.js backend application
+  - [backend/package.json](mdc:backend/package.json) - Backend dependencies and scripts
+  - [backend/tsconfig.json](mdc:backend/tsconfig.json) - TypeScript configuration for backend
+  - [backend/.eslintrc.js](mdc:backend/.eslintrc.js) - ESLint configuration for backend
+  - [backend/src/](mdc:backend/src/) - Backend source code
+    - [backend/src/index.ts](mdc:backend/src/index.ts) - Main server entry point
+  - [backend/env.example](mdc:backend/env.example) - Environment variables template
+
+## Platform Support
+- **Frontend**: React Native with Expo (Android, iOS, Web)
+- **Backend**: Express.js API server (Node.js)
+
+## Key Technologies
+### Frontend
+- React Native 0.79.5
+- Expo SDK 53
+- TypeScript for type safety
+- Expo Router for navigation
+- React Navigation for tab navigation
+
+### Backend
+- Express.js 4.18.2
+- TypeScript for type safety
+- Node.js runtime
+- CORS, Helmet, Morgan for security and logging
+- Rate limiting and compression middleware
+
+## Development Workflow
+- Use `npm run dev` to start both frontend and backend
+- Use `npm run dev:frontend` for frontend only
+- Use `npm run dev:backend` for backend only
+- Use `npm run build` to build both applications
+- Use `npm run lint` to lint both frontend and backend
 # Smart Packing - Full Stack Project Structure
 
 ## Project Overview

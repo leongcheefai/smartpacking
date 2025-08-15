@@ -97,5 +97,7 @@ Reference [backend/package.json](mdc:backend/package.json) for backend scripts:
 - Use proper secrets management
 description:
 globs:
-alwaysApply: false
+
+---
+alwaysApply: true
 ---

@@ -81,5 +81,5 @@ The backend follows a modern Express.js architecture with TypeScript:
 - `npm run clean` - Clean build artifacts
 description:
 globs:
-alwaysApply: false
+alwaysApply: true
 ---

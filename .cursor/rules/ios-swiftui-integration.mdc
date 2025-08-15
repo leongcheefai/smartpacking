@@ -1,3 +1,6 @@
+---
+alwaysApply: true
+---
 # iOS SwiftUI Integration Guidelines
 
 ## Native Module Development
@@ -62,5 +65,4 @@ class SwiftUIComponent: RCTViewManager {
 - Follow iOS security best practices
 description:
 globs:
-alwaysApply: false
 ---

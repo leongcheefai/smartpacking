@@ -66,5 +66,7 @@ Current plugins configured:
 - Use TypeScript for better development experience
 description:
 globs:
-alwaysApply: false
+
+---
+alwaysApply: true
 ---

@@ -77,5 +77,5 @@ The project follows a structured component architecture:
 - Test on different screen sizes
 description:
 globs:
-alwaysApply: false
+alwaysApply: true
 ---
